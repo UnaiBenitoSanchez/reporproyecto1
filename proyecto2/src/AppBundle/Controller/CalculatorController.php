@@ -8,6 +8,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CalculatorController extends Controller
 
+    /* 
+    *@Route("/calculator/{age}")
+    */
+
 {
     public function indexAction($age){
     $currentYear=date("Y");
