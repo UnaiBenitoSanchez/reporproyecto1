@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "SisTec Dark Theme",
+    "files.eol":"\n",
+    // CONFIGURACIÓN PARA PHP
+    "php.validate.executablePath": "C:\\xampp\\2ºDAW\\php\\php.exe",
+    "php.validate.run": "onType",
+    "php.executablePath": "C:\\xampp\\php\\php.exe",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "grunt.autoDetect": "on",
+    "gulp.autoDetect": "on",
+    "jake.autoDetect": "on"
+}   
