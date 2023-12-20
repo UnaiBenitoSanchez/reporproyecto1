@@ -1,0 +1,66 @@
+forecast_simple:
+    path: /forecast/index
+    defaults: {_controller: AppBundle:Forecast:index}
+
+forecast_param:
+    path: /forecast/{weather}
+    defaults: {_controller: AppBundle:Forecast:indexParam, weather: cloudy}
+
+forecast_2_params:
+    path: /forecast/{weather}/{temperature}
+    defaults: {_controller: AppBundle:Forecast:index2Params, weather: cloudy, temperature: 15}
+
+forecast_request_param:
+    path: /forecast/indexRequest/{weather}/{temperature}
+    defaults: {_controller: AppBundle:Forecast:indexRequest, weather: cloudy, temperature: 15}
+
+redirect_index:
+    path: /redirect/index
+    defaults: {_controller: AppBundle:Redirect:Index}
+
+redirect_interna_index:
+    path: /redirectinterna/index
+    defaults: {_controller: AppBundle:Redirect:internalRedirect}
+
+redirect_permanent:
+    path: /redirectpermanente/index
+    defaults: {_controller: AppBundle:Redirect:internalRedirectPermanent}
+
+redirect_externa_index:
+    path: /redirectexterna/index
+    defaults: {_controller: AppBundle:Redirect:externalRedirect}
+
+get_temp:
+    path: /temperature/{id}
+    defaults: {_controller: AppBundle:Temperature:get}
+    requirements: 
+        id: \d+
+        #requiere que este parámetro es un número entero positivo
+
+check_temp:
+    path: /temperature/check    
+    defaults: {_controller: AppBundle:Temperature:check}
+
+getall_temp:
+    path: /temperature/getall
+    defaults: {_controller: AppBundle:Temperature:getAll}
+
+location_index:
+    path: /location/index
+    defaults: {_controller: AppBundle:Location:index}
+
+respuesta_json:
+    path: /location/json
+    defaults: {_controller: AppBundle:Location:indexJson}
+
+standalone:
+    path: "/standalone"
+    defaults: 
+        _controller: FrameworkBundle:Template:template
+        template: standalone/index.html.twig
+        maxAge: 86400
+        sharedAge: 86400
+
+forward_index:
+    path: /forward
+    defaults: {_controller: AppBundle:Forward:index}

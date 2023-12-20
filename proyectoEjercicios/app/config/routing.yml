@@ -1,0 +1,35 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+nueva_accion_route:
+    path: /nueva-accion/{username}
+    defaults: {_controller: AppBundle:Ejercicio24:nuevaAccion}
+
+index:
+    path: /login/{user}/{password}
+    defaults: {_controller: AppBundle:Session:login}
+
+loginIncorrecto:
+    path:     /login/incorrecto
+    defaults: { _controller: "AppBundle:Login:loginIncorrecto"}
+
+signin:
+    path: /signin/{name}
+    defaults: { _controller: AppBundle:Network:signin, name:'anonimo'}
+
+location:
+    path: /{locale}
+    defaults: { _controller: AppBundle:Network:language, locale:'es'}
+
+profile:
+    path: /profile
+    defaults: { _controller: AppBundle:Network:profile}
+
+info:
+    path: /info
+    defaults: { _controller: AppBundle:Network:info}
+
+calculadora:
+    path: /calc/{num1}/{num2}
+    defaults: { _controller: AppBundle:Calculadora:operaciones}

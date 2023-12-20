@@ -1,0 +1,8 @@
+Crear proyecto symfony: composer create-project symfony/framework-standard-edition nombre_del_proyecto
+Usar después de crear el proyecto: composer install
+Iniciar servidor interno del proyecto: (nos colocamos en el proyecto con los cd y luego ponemos esto) php bin/console server:run
+Comprobar que está iniciado: localhost:8000
+
+http://localhost/2ºDAW/symfony/(nombre_del_proyecto)/web/app_dev.php/(ruta_especificada_en_el_routing_yml)
+
+carpteta nombre, metemos ejercicio hp, fichero routing.yml, fichero controller, los twig y el documento word

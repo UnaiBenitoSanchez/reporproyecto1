@@ -1,0 +1,23 @@
+index:
+    path: /{mensaje}
+    defaults: {_controller: AppBundle:Examen:index}
+        
+nombreUsuario:
+    path: /mensaje/{username}
+    defaults: {_controller: AppBundle:Examen:nombreusuario}
+    
+suma:
+    path: /suma/{num1}/{num2}
+    defaults: { _controller: AppBundle:Examen:suma}
+    
+divide:
+    path: /divide/{num1}/{num2}
+    defaults: { _controller: AppBundle:Examen:divide}
+
+login:
+    path: /login/{usu}/{pass}
+    defaults: {_controller: AppBundle:Examen:login}
+
+login_incorrecto:
+    path: /login/incorrecto
+    defaults: { _controller: "AppBundle:Login:login_incorrecto"}

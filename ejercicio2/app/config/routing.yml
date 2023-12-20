@@ -1,0 +1,23 @@
+login:
+    path: /singin/{name}
+    defaults: {_controller: AppBundle:Network:singin, name:'anonimo'}
+    requirements:
+        name: '[a-zA-Z]+'
+
+location:
+    path: /{locale}
+    defaults: {_controller: AppBundle:Network:language, locale:'es'}
+    requirements:
+        locale: 'es|en|fr' #Solo se aceptan esos valores como locale
+
+profile: 
+    path: /profile
+    defaults: {_controller: AppBundle:Network:profile}
+
+info:
+    path: /info
+    defaults: {_controller: AppBundle:Network:info}
+
+logout:
+    path: /logout
+    defaults: {_controller: AppBundle:Network:logout}

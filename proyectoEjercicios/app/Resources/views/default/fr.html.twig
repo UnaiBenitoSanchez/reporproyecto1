@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+ {% block body %} 
+
+        {% for flashMessage in app.session.flashbag.get('default') %}
+        <div calss="flash-notice">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+ 
+ {% endblock %}
